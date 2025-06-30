@@ -30,3 +30,6 @@ window#waybar {
 @import url("animations.css");
 
 /* Стили для отдельных модулей будут добавляться ниже */
+#clock:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Легкое осветление при наведении */
+}
