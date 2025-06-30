@@ -1,3 +1,22 @@
 {
-    // Сюда будут добавляться конфигурации для отдельных модулей
+    "clock": {
+        "format": "{:%H:%M\n%d.%m.%y}",
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month"
+            // "format": { // Примеры для кастомизации календаря, если понадобятся
+            //     "months": "<span color='#ffead3'><b>{}</b></span>",
+            //     "days": "<span color='#ecc6d9'><b>{}</b></span>",
+            //     "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+            //     "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+            //     "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            // }
+        },
+        "actions": {
+            // "on-click-right": "mode", // Можно раскомментировать для переключения вида календаря (год/месяц)
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    }
+    // Другие модули будут добавляться сюда
 }
