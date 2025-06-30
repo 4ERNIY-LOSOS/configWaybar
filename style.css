@@ -15,18 +15,16 @@ window#waybar {
     margin: 5px 5px 0 5px;                    /* Отступы от краев экрана: 5px сверху, по бокам; 0 снизу (панель вверху) */
 }
 
-/* Стили для групп модулей (если используются) */
-/*
+/* Стили для групп модулей */
 .modules-left,
 .modules-center,
 .modules-right {
-    background: rgba(0, 0, 8, .7);
-    margin: 3px 0px;
-    padding: 0 5px;
-    border-radius: 8px;
-    border: 1px solid rgba(128, 128, 128, 0.2);
+    background-color: rgba(0, 0, 0, 0.15);      /* Почти прозрачный черный фон */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Тонкая полупрозрачная белая обводка */
+    border-radius: 6px;                         /* Скругление углов */
+    margin: 3px 5px;                            /* Отступы вокруг групп от краев панели */
+    padding: 0 8px;                             /* Внутренние горизонтальные отступы для модулей */
 }
-*/
 
 /* Подключение файла с анимациями */
 @import url("animations.css");
