@@ -2,8 +2,9 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 42,
-    "spacing": 4,
+    "height": 30, // Устанавливаем высоту панели 30px
+    // "width": 60, // Убираем фиксированную ширину, панель будет на всю ширину с учетом margin
+    "spacing": 4, // Оставляем небольшой отступ между модулями, если они будут рядом
     "modules-left": [],
     "modules-center": [],
     "modules-right": ["clock"],
