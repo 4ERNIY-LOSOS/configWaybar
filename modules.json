@@ -1,7 +1,7 @@
 {
     "clock": {
         "format": "{:%H:%M} X {:%d.%m.%y}",
-        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "{:%B %Y}", // Упрощенный tooltip-format для теста
         "calendar": {
             "mode": "month"
             // "format": { // Примеры для кастомизации календаря, если понадобятся
