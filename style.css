@@ -27,19 +27,17 @@ window#waybar {
     padding: 0 8px;                             /* Внутренние горизонтальные отступы для модулей */
 }
 
-/* 5. Специфичные стили для отдельных модулей */
+/* 4. Специфичные стили для отдельных модулей */
 #clock {
-    padding: 2px 8px; /* Немного увеличим вертикальный padding для лучшего вида "капсулы", горизонтальный тоже */
-    margin: 2px 5px;  /* Увеличим margin, чтобы подсветка точно не выходила за группу */
-                      /* Общий горизонтальный отступ от соседних элементов/краев группы теперь 5px */
-    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out; /* Убрали transition для padding/margin */
-    border-radius: 6px; /* Базовое скругление */
+    padding: 2px 8px; /* Внутренние отступы модуля */
+    margin: 2px 5px;  /* Внешние отступы модуля, обеспечивают расстояние от краев группы */
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    border-radius: 6px;
 }
 
 #clock:hover {
-    background-color: rgba(160, 160, 160, 0.6); /* Фон модуля при наведении */
-    border-radius: 6px; /* Оставляем тот же border-radius, чтобы форма не менялась */
-    /* Убрали изменения padding и margin, модуль не будет "расти" */
+    background-color: rgba(160, 160, 160, 0.6); /* Фон при наведении */
+    border-radius: 6px; /* Сохраняем радиус, чтобы форма не менялась */
 }
 
 /* Подключение файла с анимациями */
