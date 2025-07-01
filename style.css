@@ -1,7 +1,8 @@
 /* Глобальные стили Waybar */
 * {
     font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 6 Solid", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
+    letter-spacing: 0.5px; /* Добавляем небольшое расстояние между символами */
     border: none;
     border-radius: 0;
     min-height: 0;
@@ -26,7 +27,7 @@ window#waybar {
 .modules-left,
 .modules-center,
 .modules-right {
-    background-color: rgba(0, 0, 0, 0.15);      /* Почти прозрачный черный фон */
+    background-color: rgba(0, 0, 0, 0.5);      /* Полупрозрачный черный фон (темнее) */
     border: 1px solid rgba(255, 255, 255, 0.15); /* Тонкая полупрозрачная белая обводка */
     border-radius: 6px;                         /* Скругление углов */
     margin: 3px 5px;                            /* Отступы вокруг групп от краев панели */
@@ -38,12 +39,51 @@ window#waybar {
 
 /* Стили для отдельных модулей будут добавляться ниже */
 #clock {
-    /* Сюда можно будет добавить индивидуальные отступы для модуля #clock, если потребуется */
-    /* Например: padding: 0 5px; */
+    padding: 0 5px; /* Добавим базовые отступы, чтобы было что увеличивать */
+    margin: 0 2px; /* Небольшой внешний отступ между модулями, если их будет несколько */
+    transition: all 0.2s ease-in-out; /* Плавный переход для всех свойств */
 }
 
 #clock:hover {
-    background-color: rgba(120, 120, 120, 0.35); /* Основной фон подсветки (серый, чуть плотнее фона группы) */
-    border-radius: 6px;                          /* Скругление как у группы */
-    box-shadow: 0 0 0 3px rgba(120, 120, 120, 0.25); /* Свечение для эффекта "больше" */
+    background-color: rgba(100, 100, 100, 0.45); /* Чуть измененный фон при наведении */
+    border-radius: 8px; /* Немного увеличим скругление для визуального эффекта */
+    padding: 2.5px 7.5px; /* Увеличиваем внутренние отступы: (5px / 2) по вертикали, (5px / 2) по горизонтали к существующим */
+                          /* Это даст общее увеличение на 5px по высоте и 5px по ширине */
+    margin: -2.5px -0.5px; /* Компенсируем увеличение padding и добавляем небольшой сдвиг, чтобы тень не обрезалась */
+                           /* Вертикальный margin: -(5px/2) = -2.5px */
+                           /* Горизонтальный margin: 기존 2px - (5px/2) = 2px - 2.5px = -0.5px (если хотим сохранить позицию) */
+                           /* или просто -2.5px если хотим, чтобы модуль "вырос" из центра */
+    /* box-shadow убираем, так как эффект достигается через padding/margin */
+}
+
+/* Общий стиль для всех модулей внутри групп, чтобы эффект ховера был одинаковым */
+/* Можно будет использовать класс .module или применять к каждому ID модуля */
+.modules-left > *,
+.modules-center > *,
+.modules-right > * {
+    padding: 0 5px;
+    margin: 0 2px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 6px; /* Базовое скругление для всех модулей */
+}
+
+.modules-left > *:hover,
+.modules-center > *:hover,
+.modules-right > *:hover {
+    background-color: rgba(100, 100, 100, 0.45);
+    border-radius: 8px;
+    /* Расчет padding для увеличения на 5px в высоту и ширину */
+    /* Изначальный padding: 0 5px. Целевой padding для увеличения на 5px: (0+2.5) (5+2.5) = 2.5px 7.5px */
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    padding-left: 7.5px; /* 5px (базовый) + 2.5px (половина от 5px) */
+    padding-right: 7.5px; /* 5px (базовый) + 2.5px (половина от 5px) */
+
+    /* Компенсация margin для сохранения общего расположения */
+    /* Увеличили padding на 2.5px с каждой стороны по вертикали и горизонтали */
+    /* Значит margin нужно уменьшить на 2.5px с каждой стороны */
+    margin-top: -2.5px;
+    margin-bottom: -2.5px;
+    margin-left: -0.5px; /* Исходный 2px - 2.5px = -0.5px */
+    margin-right: -0.5px;/* Исходный 2px - 2.5px = -0.5px */
 }
