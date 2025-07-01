@@ -22,7 +22,7 @@ window#waybar {
 .modules-right {
     background-color: rgba(0, 0, 0, 0.5);      /* Полупрозрачный черный фон */
     border: 1px solid rgba(255, 255, 255, 0.15); /* Тонкая полупрозрачная белая обводка */
-    border-radius: 6px;                         /* Скругление углов */
+    border-radius: 15px;                         /* Скругление углов */
     margin: 3px 5px;                            /* Отступы вокруг групп от краев панели */
     padding: 0 8px;                             /* Внутренние горизонтальные отступы для модулей */
 }
@@ -32,12 +32,12 @@ window#waybar {
     padding: 2px 8px; /* Внутренние отступы модуля */
     margin: 2px 5px;  /* Внешние отступы модуля, обеспечивают расстояние от краев группы */
     transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
-    border-radius: 6px;
+    border-radius: 15px;
 }
 
 #clock:hover {
     background-color: rgba(160, 160, 160, 0.6); /* Фон при наведении */
-    border-radius: 6px; /* Сохраняем радиус, чтобы форма не менялась */
+    border-radius: 15px; /* Сохраняем радиус, чтобы форма не менялась */
 }
 
 /* Подключение файла с анимациями */
