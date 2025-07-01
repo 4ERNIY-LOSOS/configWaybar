@@ -1,6 +1,6 @@
 {
     "clock": {
-        "format": "{:%H:%M\n%d.%m.%y}",
+        "format": "<span font_desc='JetBrainsMono Nerd Font 16'>{:%H:%M}</span>\n<span font_desc='JetBrainsMono Nerd Font 14'>X</span>\n<span font_desc='JetBrainsMono Nerd Font 12'>{:%d.%m.%y}</span>",
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "month"
