@@ -15,7 +15,8 @@
                                                //  (fa-volume-medium) ~51-75%
                                                // 🔊 (fa-volume-high) ~76-100%
         },
-        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle", // Левый клик - Mute/Unmute
+        "on-click-right": "~/.config/waybar/scripts/wofi-sound-sink-selector.sh", // Правый клик - запуск скрипта выбора через wofi
         "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
         "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
         "scroll-step": 5 // Шаг прокрутки громкости в процентах
