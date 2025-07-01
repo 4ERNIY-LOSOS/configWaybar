@@ -1,22 +1,7 @@
 {
     "clock": {
-        "format": "{:%H:%M} X {:%d.%m.%y}",
-        "tooltip-format": "{:%B %Y}", // Упрощенный tooltip-format для теста
-        "calendar": {
-            "mode": "month"
-            // "format": { // Примеры для кастомизации календаря, если понадобятся
-            //     "months": "<span color='#ffead3'><b>{}</b></span>",
-            //     "days": "<span color='#ecc6d9'><b>{}</b></span>",
-            //     "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-            //     "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-            //     "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-            // }
-        },
-        "actions": {
-            // "on-click-right": "mode", // Можно раскомментировать для переключения вида календаря (год/месяц)
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
-        }
+        "format": "{:%H:%M / %d.%m.%y}",
+        "interval": 60 // Интервал обновления в секундах (по умолчанию 60)
     }
     // Другие модули будут добавляться сюда
 }
