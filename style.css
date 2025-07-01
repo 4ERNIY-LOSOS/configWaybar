@@ -40,7 +40,7 @@ window#waybar {
 .modules-left > *:hover,
 .modules-center > *:hover,
 .modules-right > *:hover {
-    background-color: rgba(100, 100, 100, 0.45); /* Фон модуля при наведении */
+    background-color: rgba(160, 160, 160, 0.6); /* Фон модуля при наведении (светлее и менее прозрачный) */
     border-radius: 8px; /* Скругление углов модуля при наведении */
     /* Увеличение padding для эффекта "роста" */
     padding-top: 2.5px;
