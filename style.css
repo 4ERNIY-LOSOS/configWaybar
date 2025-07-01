@@ -1,8 +1,7 @@
 /* Глобальные стили Waybar */
 * {
-    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 6 Solid", sans-serif;
+    font-family: "Noto Sans Mono", "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 6 Solid", sans-serif;
     font-size: 16px;
-    letter-spacing: 0.5px; /* Добавляем небольшое расстояние между символами */
     border: none;
     border-radius: 0;
     min-height: 0;
@@ -32,7 +31,7 @@ window#waybar {
 
 /* Стили для отдельных модулей будут добавляться ниже */
 #clock {
-    line-height: 1; /* Стандартный межстрочный интервал для модуля часов */
+    /* line-height не поддерживается, убираем */
 }
 
 /* Общий стиль для всех модулей внутри групп */
