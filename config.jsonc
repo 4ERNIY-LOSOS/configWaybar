@@ -7,7 +7,7 @@
     "spacing": 4, // Оставляем небольшой отступ между модулями, если они будут рядом
     "modules-left": [],
     "modules-center": [],
-    "modules-right": ["clock"],
+    "modules-right": ["pulseaudio", "clock"], // Добавили pulseaudio перед часами
 
     "include": [
         "~/.config/waybar/modules.json"

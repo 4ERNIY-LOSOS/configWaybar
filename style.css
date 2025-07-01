@@ -40,5 +40,17 @@ window#waybar {
     border-radius: 15px; /* Сохраняем радиус, чтобы форма не менялась */
 }
 
+#pulseaudio {
+    padding: 2px 8px;
+    margin: 2px 5px;
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    border-radius: 15px;
+}
+
+#pulseaudio:hover {
+    background-color: rgba(160, 160, 160, 0.6); /* Такой же фон при наведении, как у clock */
+    border-radius: 15px;
+}
+
 /* Подключение файла с анимациями */
 @import url("animations.css");

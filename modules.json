@@ -3,7 +3,22 @@
         "interval": 60,
         "tooltip": true,
         "format": "{:%H.%M}",
-        "tooltip-format": "{:%d-%m-%Y}" // Поменяли местами день и год
+        "tooltip-format": "{:%d-%m-%Y}"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted", // Иконка для "без звука" (fa-volume-slash)
+        "format-icons": {
+            "default": ["", "", "", "🔊"] // Иконки для уровней громкости:
+                                               //  (fa-volume-off) ~0-25%
+                                               //  (fa-volume-low) ~26-50%
+                                               //  (fa-volume-medium) ~51-75%
+                                               // 🔊 (fa-volume-high) ~76-100%
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "scroll-step": 5 // Шаг прокрутки громкости в процентах
     }
     // Другие модули будут добавляться сюда
 }
