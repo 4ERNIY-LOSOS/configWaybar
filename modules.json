@@ -1,22 +1,9 @@
 {
     "clock": {
-        "format": "{:%H:%M/%d.%m.%y}", // Убрал пробелы вокруг /
         "interval": 60,
-        "tooltip-format": "<span font='Noto Sans Mono'><tt><small>{calendar}</small></tt></span>", // Используем font вместо font_family
-        "calendar": {
-            "mode": "month", // Отображаем только текущий месяц по умолчанию
-            "format": {
-                "months": "<span color='white'><b>{}</b></span>", // Текущий месяц белым
-                "days": "<span color='white'>{}</span>",           // Дни текущего месяца белым (по умолчанию)
-                "weekdays": "<span color='white'>{}</span>",       // Заголовки дней недели (Пн, Вт...) белым по умолчанию
-                                                                // Стилизация отдельных дней недели (Сб, Вс красным) потребует CSS, если возможно
-                "today": "<span color='red'><b>{}</b></span>"      // Сегодняшний день красным, жирным (без подчеркивания)
-            }
-        },
-        "actions": { // Действия для прокрутки календаря
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
-        }
+        "tooltip": true,
+        "format": "{:%H.%M}",
+        "tooltip-format": "{:%Y-%m-%d}"
     }
     // Другие модули будут добавляться сюда
 }

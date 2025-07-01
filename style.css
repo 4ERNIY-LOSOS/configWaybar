@@ -27,20 +27,16 @@ window#waybar {
     padding: 0 8px;                             /* Внутренние горизонтальные отступы для модулей */
 }
 
-/* 4. Общие стили для модулей внутри групп */
-.modules-left > *,
-.modules-center > *,
-.modules-right > * {
+/* 5. Специфичные стили для отдельных модулей */
+#clock {
     padding: 0 5px;
     margin: 0 2px;
     transition: all 0.2s ease-in-out;
-    border-radius: 6px; /* Базовое скругление для всех модулей */
+    border-radius: 6px; /* Базовое скругление */
 }
 
-.modules-left > *:hover,
-.modules-center > *:hover,
-.modules-right > *:hover {
-    background-color: rgba(160, 160, 160, 0.6); /* Фон модуля при наведении (светлее и менее прозрачный) */
+#clock:hover {
+    background-color: rgba(160, 160, 160, 0.6); /* Фон модуля при наведении */
     border-radius: 8px; /* Скругление углов модуля при наведении */
     /* Увеличение padding для эффекта "роста" */
     padding-top: 2.5px;
@@ -52,13 +48,6 @@ window#waybar {
     margin-bottom: -2.5px;
     margin-left: -0.5px;
     margin-right: -0.5px;
-}
-
-/* 5. Специфичные стили для отдельных модулей */
-#clock {
-    /* line-height не поддерживается Waybar для модулей, поэтому свойство удалено. */
-    /* Если для #clock потребуются уникальные стили, их можно добавить здесь. */
-    /* Например: color: #somecolor; */
 }
 
 /* Подключение файла с анимациями */
