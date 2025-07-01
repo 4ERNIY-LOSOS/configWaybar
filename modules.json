@@ -3,7 +3,7 @@
         "interval": 60,
         "tooltip": true,
         "format": "{:%H.%M}",
-        "tooltip-format": "{:%Y-%m-%d}"
+        "tooltip-format": "{:%d-%m-%Y}" // Поменяли местами день и год
     }
     // Другие модули будут добавляться сюда
 }
