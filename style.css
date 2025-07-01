@@ -1,4 +1,4 @@
-/* Глобальные стили Waybar */
+/* 1. Глобальные стили Waybar */
 * {
     font-family: "Noto Sans Mono", "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 6 Solid", sans-serif;
     font-size: 16px;
@@ -7,6 +7,7 @@
     min-height: 0;
 }
 
+/* 2. Стили панели Waybar */
 window#waybar {
     background-color: transparent; /* Полностью прозрачный фон */
     color: #FFFFFF;                /* Цвет текста: белый */
@@ -15,26 +16,18 @@ window#waybar {
     margin: 10px 10px 0 10px;      /* Отступы от краев экрана */
 }
 
-/* Стили для групп модулей */
+/* 3. Стили для групп модулей */
 .modules-left,
 .modules-center,
 .modules-right {
-    background-color: rgba(0, 0, 0, 0.5);      /* Полупрозрачный черный фон (темнее) */
+    background-color: rgba(0, 0, 0, 0.5);      /* Полупрозрачный черный фон */
     border: 1px solid rgba(255, 255, 255, 0.15); /* Тонкая полупрозрачная белая обводка */
     border-radius: 6px;                         /* Скругление углов */
     margin: 3px 5px;                            /* Отступы вокруг групп от краев панели */
     padding: 0 8px;                             /* Внутренние горизонтальные отступы для модулей */
 }
 
-/* Подключение файла с анимациями */
-@import url("animations.css");
-
-/* Стили для отдельных модулей будут добавляться ниже */
-#clock {
-    /* line-height не поддерживается, убираем */
-}
-
-/* Общий стиль для всех модулей внутри групп */
+/* 4. Общие стили для модулей внутри групп */
 .modules-left > *,
 .modules-center > *,
 .modules-right > * {
@@ -60,3 +53,13 @@ window#waybar {
     margin-left: -0.5px;
     margin-right: -0.5px;
 }
+
+/* 5. Специфичные стили для отдельных модулей */
+#clock {
+    /* line-height не поддерживается Waybar для модулей, поэтому свойство удалено. */
+    /* Если для #clock потребуются уникальные стили, их можно добавить здесь. */
+    /* Например: color: #somecolor; */
+}
+
+/* Подключение файла с анимациями */
+@import url("animations.css");
