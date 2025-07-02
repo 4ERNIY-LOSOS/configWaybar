@@ -19,6 +19,13 @@
         "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
         "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
         "scroll-step": 5 // Шаг прокрутки громкости в процентах
+    },
+    "network": {
+        "format-wifi": " {essid} ({signalStrength}%)", // Icon: fa-wifi
+        "format-ethernet": " {ifname}", // Icon: fa-link (или  fa-ethernet)
+        "format-disconnected": " Disconnected", // Icon: fa-unlink
+        "tooltip-format": "{ifname} via {gwaddr} \nIP: {ipaddr}\nMAC: {hwaddr}", // Icon: fa-network-wired
+        "on-click-right": "~/.config/waybar/scripts/show-speedtest-notification.sh" // Изменено на вызов скрипта
     }
     // Другие модули будут добавляться сюда
 }
