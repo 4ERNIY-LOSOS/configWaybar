@@ -2,12 +2,12 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 32, // Устанавливаем высоту панели 32px
-    // "width": 60, // Убираем фиксированную ширину, панель будет на всю ширину с учетом margin
-    "spacing": 4, // Оставляем небольшой отступ между модулями, если они будут рядом
+    "height": 39, // Увеличили высоту до 39px, как рекомендовал Waybar
+    // "width": 60,
+    "spacing": 4,
     "modules-left": [],
-    "modules-center": [],
-    "modules-right": ["network", "pulseaudio", "clock"], // Добавили network перед pulseaudio
+    "modules-center": ["cpu", "memory"], // Добавили cpu и memory в центр
+    "modules-right": ["network", "pulseaudio", "clock"],
 
     "include": [
         "~/.config/waybar/modules.json"

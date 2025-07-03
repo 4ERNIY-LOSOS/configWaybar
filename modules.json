@@ -25,6 +25,18 @@
         "interval": 5,
         "tooltip": false // Всплывающая подсказка для сети остается отключенной
         // "tooltip-format" для сети не нужен
+    },
+    "cpu": {
+        "format": " {usage}%", // Icon: fa-microchip
+        "tooltip": true,
+        "tooltip-format": "CPU: {usage}%\nAvg Load: {load_avg}",
+        "interval": 5 // Обновлять каждые 5 секунд
+    },
+    "memory": {
+        "format": " {percentage_used}%", // Icon: fa-memory
+        "tooltip": true,
+        "tooltip-format": "RAM: {used}GB / {total}GB ({percentage_used}%) \nSwap: {swap_used}GB / {swap_total}GB ({swap_percentage_used}%)",
+        "interval": 5 // Обновлять каждые 5 секунд
     }
-    // Другие модули будут добавляться сюда
+    // Модуль для Nvidia GPU (custom/nvidia) будет добавлен следующим шагом
 }

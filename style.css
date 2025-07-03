@@ -64,5 +64,29 @@ window#waybar {
     border-radius: 15px;
 }
 
+#cpu {
+    padding: 2px 8px;
+    margin: 2px 5px;
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    border-radius: 15px;
+}
+
+#cpu:hover {
+    background-color: rgba(160, 160, 160, 0.6);
+    border-radius: 15px;
+}
+
+#memory {
+    padding: 2px 8px;
+    margin: 2px 5px;
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    border-radius: 15px;
+}
+
+#memory:hover {
+    background-color: rgba(160, 160, 160, 0.6);
+    border-radius: 15px;
+}
+
 /* Подключение файла с анимациями */
 @import url("animations.css");
