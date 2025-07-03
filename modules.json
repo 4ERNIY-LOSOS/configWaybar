@@ -1,32 +1,30 @@
 {
     "clock": {
         "interval": 60,
-        "tooltip": true,
         "format": "{:%H.%M}",
-        "tooltip-format": "{:%d-%m-%Y}"
+        "tooltip": true, // Включаем всплывающую подсказку обратно
+        "tooltip-format": "{:%d-%m-%Y}" // Возвращаем формат подсказки
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-muted": " Muted", // Иконка для "без звука" (fa-volume-slash)
+        "format-muted": " Muted",
         "format-icons": {
-            "default": ["", "", ""] // Иконки для уровней громкости, теперь 3 уровня:
-                                               //  (fa-volume-off) ~1-33%
-                                               //  (fa-volume-low) ~34-66%
-                                               //  (fa-volume-medium) ~67-100%
+            "default": ["", "", ""]
         },
-        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle", // Левый клик - Mute/Unmute
-        "on-click-right": "~/.config/waybar/scripts/wofi-sound-sink-selector.sh", // Правый клик - запуск скрипта выбора через wofi
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "~/.config/waybar/scripts/wofi-sound-sink-selector.sh",
         "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
         "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-        "scroll-step": 5 // Шаг прокрутки громкости в процентах
+        "scroll-step": 5
+        // "tooltip": false убрано, будет использоваться тултип по умолчанию или его можно будет настроить
     },
     "network": {
-        "format-wifi": " {signalStrength}%", // Иконка Wi-Fi и сила сигнала
-        "format-ethernet": "", // Иконка Ethernet (fa-ethernet)
-        "format-disconnected": "", // Иконка disconnected (fa-unlink)
-        "tooltip-format": "{ifname}: {ipaddr}/{cidr}\nESSID: {essid}\nGateway: {gwaddr}\nSignal: {signalStrength}%", // Обновленный tooltip
-        "interval": 5 // Обновлять информацию каждые 5 секунд
-        // "on-click-right" удалено
+        "format-wifi": " {signalStrength}%",
+        "format-ethernet": "",
+        "format-disconnected": "",
+        "interval": 5,
+        "tooltip": false // Всплывающая подсказка для сети остается отключенной
+        // "tooltip-format" для сети не нужен
     }
     // Другие модули будут добавляться сюда
 }
