@@ -2,8 +2,8 @@
     "clock": {
         "interval": 60,
         "format": "{:%H.%M}",
-        "tooltip": true, // Включаем всплывающую подсказку обратно
-        "tooltip-format": "{:%d-%m-%Y}" // Возвращаем формат подсказки
+        "tooltip": true,
+        "tooltip-format": "{:%d-%m-%Y}"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
@@ -16,21 +16,18 @@
         "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
         "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
         "scroll-step": 5
-        // "tooltip": false убрано, будет использоваться тултип по умолчанию или его можно будет настроить
     },
     "network": {
         "format-wifi": " {signalStrength}%",
         "format-ethernet": "",
         "format-disconnected": "",
         "interval": 5,
-        "tooltip": false // Всплывающая подсказка для сети остается отключенной
-        // "tooltip-format" для сети не нужен
+        "tooltip": false
     },
     "cpu": {
-        "format": " {usage}%", // Icon: fa-microchip
-        "tooltip": true,
-        "tooltip-format": "CPU: {usage}%\nAvg Load: {load_avg}",
-        "interval": 5 // Обновлять каждые 5 секунд
+        "interval": 10,
+        "format": " {usage}%",
+        "max-length": 10
     },
     "memory": {
         "interval": 30,
@@ -38,9 +35,10 @@
     },
     "custom/gpu": {
         "exec": "~/.config/waybar/scripts/get_gpu_util.sh",
-        "return-type": "json",
-        "format": "GPU {text}%",
+        "format": "GPU {}%",
+        "return-type": "text",
         "interval": 5,
-        "tooltip": true
+        "tooltip": true,
+        "tooltip-format": "Nvidia GPU Load: {}%"
     }
 }
