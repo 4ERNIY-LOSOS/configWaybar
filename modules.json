@@ -1,22 +1,42 @@
 {
     "clock": {
-        "format": "{:%H:%M\n%d.%m.%y}",
-        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode": "month"
-            // "format": { // Примеры для кастомизации календаря, если понадобятся
-            //     "months": "<span color='#ffead3'><b>{}</b></span>",
-            //     "days": "<span color='#ecc6d9'><b>{}</b></span>",
-            //     "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-            //     "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-            //     "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-            // }
+        "interval": 60,
+        "format": "{:%H.%M}",
+        "tooltip": true, // Включаем всплывающую подсказку обратно
+        "tooltip-format": "{:%d-%m-%Y}" // Возвращаем формат подсказки
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": ["", "", ""]
         },
-        "actions": {
-            // "on-click-right": "mode", // Можно раскомментировать для переключения вида календаря (год/месяц)
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
-        }
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "~/.config/waybar/scripts/wofi-sound-sink-selector.sh",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "scroll-step": 5
+        // "tooltip": false убрано, будет использоваться тултип по умолчанию или его можно будет настроить
+    },
+    "network": {
+        "format-wifi": " {signalStrength}%",
+        "format-ethernet": "",
+        "format-disconnected": "",
+        "interval": 5,
+        "tooltip": false // Всплывающая подсказка для сети остается отключенной
+        // "tooltip-format" для сети не нужен
+    },
+    "cpu": {
+        "format": " {usage}%", // Icon: fa-microchip
+        "tooltip": true,
+        "tooltip-format": "CPU: {usage}%\nAvg Load: {load_avg}",
+        "interval": 5 // Обновлять каждые 5 секунд
+    },
+    "memory": {
+        "format": " {percentage_used}%", // Icon: fa-memory
+        "tooltip": true,
+        "tooltip-format": "RAM: {used}GB / {total}GB ({percentage_used}%) \nSwap: {swap_used}GB / {swap_total}GB ({swap_percentage_used}%)",
+        "interval": 5 // Обновлять каждые 5 секунд
     }
-    // Другие модули будут добавляться сюда
+    // Модуль для Nvidia GPU (custom/nvidia) будет добавлен следующим шагом
 }

@@ -1,49 +1,92 @@
-/* Глобальные стили Waybar */
+/* 1. Глобальные стили Waybar */
 * {
-    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 6 Solid", sans-serif;
-    font-size: 15px;
+    font-family: "Noto Sans Mono", "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 6 Solid", sans-serif;
+    font-size: 16px;
     border: none;
     border-radius: 0;
     min-height: 0;
 }
 
+/* 2. Стили панели Waybar */
 window#waybar {
     background-color: transparent; /* Полностью прозрачный фон */
     color: #FFFFFF;                /* Цвет текста: белый */
     border-radius: 0px;             /* Без скругления углов */
     border: none;                   /* Без обводки */
-    margin: 10px 10px 0 10px;      /* Отступы от краев экрана: 10px сверху, по бокам; 0 снизу (панель вверху) */
-    /* Для центрирования панели шириной 60% можно попробовать так, если сама панель window#waybar не центрируется:
-       Если Waybar не растягивает window#waybar на 100% из-за width: 60 в config.jsonc,
-       то для центрирования самой window#waybar можно добавить:
-       left: 20%; right: 20%; - но это может не сработать или потребовать position: fixed/absolute в Wayland.
-       Более надежный способ - оставить window#waybar на всю ширину (контролируемую margin),
-       а внутренние .modules-center настроить на нужную ширину и центрировать.
-       Пока оставляем так, чтобы проверить поведение с width в config.jsonc. */
+    margin: 10px 10px 0 10px;      /* Отступы от краев экрана */
 }
 
-/* Стили для групп модулей */
+/* 3. Стили для групп модулей */
 .modules-left,
 .modules-center,
 .modules-right {
-    background-color: rgba(0, 0, 0, 0.15);      /* Почти прозрачный черный фон */
+    background-color: rgba(0, 0, 0, 0.5);      /* Полупрозрачный черный фон */
     border: 1px solid rgba(255, 255, 255, 0.15); /* Тонкая полупрозрачная белая обводка */
-    border-radius: 6px;                         /* Скругление углов */
+    border-radius: 15px;                         /* Скругление углов */
     margin: 3px 5px;                            /* Отступы вокруг групп от краев панели */
     padding: 0 8px;                             /* Внутренние горизонтальные отступы для модулей */
 }
 
-/* Подключение файла с анимациями */
-@import url("animations.css");
-
-/* Стили для отдельных модулей будут добавляться ниже */
+/* 4. Специфичные стили для отдельных модулей */
 #clock {
-    /* Сюда можно будет добавить индивидуальные отступы для модуля #clock, если потребуется */
-    /* Например: padding: 0 5px; */
+    padding: 2px 8px; /* Внутренние отступы модуля */
+    margin: 2px 5px;  /* Внешние отступы модуля, обеспечивают расстояние от краев группы */
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    border-radius: 15px;
 }
 
 #clock:hover {
-    background-color: rgba(120, 120, 120, 0.35); /* Основной фон подсветки (серый, чуть плотнее фона группы) */
-    border-radius: 6px;                          /* Скругление как у группы */
-    box-shadow: 0 0 0 3px rgba(120, 120, 120, 0.25); /* Свечение для эффекта "больше" */
+    background-color: rgba(160, 160, 160, 0.6); /* Фон при наведении */
+    border-radius: 15px; /* Сохраняем радиус, чтобы форма не менялась */
 }
+
+#pulseaudio {
+    padding: 2px 8px;
+    margin: 2px 5px;
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    border-radius: 15px;
+}
+
+#pulseaudio:hover {
+    background-color: rgba(160, 160, 160, 0.6); /* Такой же фон при наведении, как у clock */
+    border-radius: 15px;
+}
+
+#network {
+    padding: 2px 8px;
+    margin: 2px 5px;
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    border-radius: 15px;
+}
+
+#network:hover {
+    background-color: rgba(160, 160, 160, 0.6); /* Такой же фон при наведении */
+    border-radius: 15px;
+}
+
+#cpu {
+    padding: 2px 8px;
+    margin: 2px 5px;
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    border-radius: 15px;
+}
+
+#cpu:hover {
+    background-color: rgba(160, 160, 160, 0.6);
+    border-radius: 15px;
+}
+
+#memory {
+    padding: 2px 8px;
+    margin: 2px 5px;
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    border-radius: 15px;
+}
+
+#memory:hover {
+    background-color: rgba(160, 160, 160, 0.6);
+    border-radius: 15px;
+}
+
+/* Подключение файла с анимациями */
+@import url("animations.css");
