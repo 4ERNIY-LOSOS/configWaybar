@@ -88,5 +88,17 @@ window#waybar {
     border-radius: 15px;
 }
 
+#custom-gpu {
+    padding: 2px 8px;
+    margin: 2px 5px;
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    border-radius: 15px;
+}
+
+#custom-gpu:hover {
+    background-color: rgba(160, 160, 160, 0.6);
+    border-radius: 15px;
+}
+
 /* Подключение файла с анимациями */
 @import url("animations.css");
