@@ -33,9 +33,9 @@
         "interval": 5 // Обновлять каждые 5 секунд
     },
     "memory": {
-        "format": " {percentage_used}%", // Icon: fa-memory
+        "format": " {percentage}%", // Icon: fa-memory
         "tooltip": true,
-        "tooltip-format": "RAM: {used}GB / {total}GB ({percentage_used}%) \nSwap: {swap_used}GB / {swap_total}GB ({swap_percentage_used}%)",
+        "tooltip-format": "RAM: {used} GiB / {total} GiB ({percentage}%) \nSwap: {swapUsed} GiB / {swapTotal} GiB ({swapPercentage}%)",
         "interval": 5 // Обновлять каждые 5 секунд
     }
     // Модуль для Nvidia GPU (custom/nvidia) будет добавлен следующим шагом
