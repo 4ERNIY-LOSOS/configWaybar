@@ -6,7 +6,7 @@
     // "width": 60,
     "spacing": 4,
     "modules-left": [],
-    "modules-center": ["cpu", "memory"], // Добавили cpu и memory в центр
+    "modules-center": ["cpu", "memory", "custom/gpu"], // Возвращаем custom/gpu
     "modules-right": ["hyprland/language", "network", "pulseaudio", "clock"],
 
     "include": [
