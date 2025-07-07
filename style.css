@@ -3,7 +3,7 @@
     font-family: "Noto Sans Mono", "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 6 Solid", sans-serif;
     font-size: 16px;
     border: none;
-    border-radius: 0;
+    /* border-radius: 0; */ /* Закомментировано для проверки */
     min-height: 0;
 }
 
