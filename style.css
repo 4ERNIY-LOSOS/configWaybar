@@ -130,6 +130,7 @@ window#waybar {
     min-height: 25px;  /* Единая минимальная высота */
     font-weight: bold;
     font-size: 15px;   /* Единый размер шрифта */
+    background-clip: padding-box; /* Явно указываем обрезку фона */
 }
 
 #workspaces button:hover {
