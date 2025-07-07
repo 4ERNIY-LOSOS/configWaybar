@@ -119,42 +119,33 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 1px 7px;  /* Единый паддинг */
+    padding: 1px 7px;
     margin: 3px 3px;
-    border-radius: 15px; /* Скругление 15px */
+    border-radius: 15px;
     border: 1px solid rgba(0,0,0,0); /* Прозрачная граница по умолчанию */
-    color: #FFFFFF; /* Цвет текста (цифры) для неактивных столов - белый */
-    background-color: rgba(255, 255, 255, 0.15); /* Полупрозрачный светлый фон для неактивных */
-    background-image: none;
-    box-shadow: none;
-    text-shadow: none;
-    outline: none;
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.15); /* Фон неактивных */
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
     min-width: 25px;
     min-height: 25px;
     font-weight: bold;
     font-size: 15px;
-    background-clip: padding-box;
 }
 
 #workspaces button:hover {
     /* Фон и обводка не меняются при наведении */
-    /* Можно добавить/изменить cursor, если нужно: cursor: pointer; */
+    /* cursor: pointer; */
 }
 
 #workspaces button.active,
 #workspaces button.focused {
-    background-color: #FFFFFF !important;
-    background-image: none !important;
-    color: #000000 !important;
-    border: 1px solid #FFFFFF !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    outline: none !important;
+    background-color: #FFFFFF; /* Белый фон */
+    color: #000000;            /* Черный текст */
+    border: 1px solid #FFFFFF; /* Белая обводка */
 }
 
 #workspaces button.urgent {
-    background-color: #e95420; /* Например, оранжевый */
+    background-color: #e95420;
     color: #FFFFFF;
 }
 
