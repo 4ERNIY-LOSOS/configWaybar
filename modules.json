@@ -45,5 +45,18 @@
         "format": " {short}",
         "tooltip": true,
         "tooltip-format": "Раскладка: {long}"
+    },
+    "hyprland/workspaces": {
+        "format": "{id}", // Используем {id} для числовых идентификаторов
+        // "persistent_workspaces": { // Раскомментируйте и настройте, если хотите всегда видеть 5 столов
+        //     "1": [],
+        //     "2": [],
+        //     "3": [],
+        //     "4": [],
+        //     "5": []
+        // },
+        "all-outputs": false,
+        "on-click": "activate",
+        "sort-by-number": true
     }
 }
