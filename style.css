@@ -158,6 +158,19 @@ window#waybar {
     display: none;
 }
 
+#tray {
+    padding: 2px 5px; /* Отступы внутри самого модуля трея */
+    margin: 2px 0px 2px 5px; /* Небольшой отступ слева от предыдущего модуля */
+}
+
+#tray > .passive { /* Стили для иконок в пассивном состоянии (если применимо) */
+    opacity: 0.5;
+}
+#tray > .needs-attention { /* Стили для иконок, требующих внимания */
+    background-color: #eb4d4b; /* Пример: красный фон */
+    opacity: 1.0;
+}
+
 
 /* Подключение файла с анимациями */
 @import url("animations.css");

@@ -7,7 +7,7 @@
     "spacing": 4,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["cpu", "memory", "custom/gpu"], // Возвращаем custom/gpu
-    "modules-right": ["hyprland/language", "network", "pulseaudio", "clock"],
+    "modules-right": ["hyprland/language", "network", "pulseaudio", "clock", "tray"],
 
     "include": [
         "~/.config/waybar/modules.json"
