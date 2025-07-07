@@ -119,22 +119,22 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 1px 5px; /* Отступы внутри кнопки (влияют на размер кружка) */
-    margin: 3px 3px;  /* Отступы между кнопками */
-    border-radius: 10px; /* Делаем кнопку круглой (подберите значение по вкусу) */
+    padding: 1px 7px;  /* Единый паддинг */
+    margin: 3px 3px;
+    border-radius: 15px; /* Новое скругление */
     border: 1px solid rgba(0,0,0,0); /* Прозрачная граница по умолчанию */
     color: #FFFFFF; /* Цвет текста (цифры) для неактивных столов - белый */
     background-color: rgba(255, 255, 255, 0.15); /* Полупрозрачный светлый фон для неактивных */
     transition: all 0.2s ease-in-out;
-    min-width: 22px; /* Минимальная ширина кнопки, чтобы кружки были более-менее одинаковые */
-    min-height: 22px;
+    min-width: 25px;   /* Единая минимальная ширина */
+    min-height: 25px;  /* Единая минимальная высота */
     font-weight: bold;
-    font-size: 15px; /* Можно чуть уменьшить шрифт для цифр */
+    font-size: 15px;   /* Единый размер шрифта */
 }
 
 #workspaces button:hover {
-    background-color: rgba(200, 200, 200, 0.4); /* Фон при наведении на неактивную кнопку */
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(170, 170, 170, 0.3); /* Менее яркий фон при наведении */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Чуть менее яркая обводка */
 }
 
 #workspaces button.active,
@@ -142,8 +142,7 @@ window#waybar {
     background-color: #FFFFFF; /* Белый фон для активного стола (кружок) */
     color: #000000; /* Черный цвет текста (цифры) для активного стола */
     border: 1px solid #FFFFFF;
-    padding: 1px 7px; /* Можно немного увеличить паддинг для активного, если нужно */
-    font-size: 16px; /* Можно чуть увеличить шрифт для активной цифры */
+    /* padding и font-size теперь наследуются от общего button */
 }
 
 #workspaces button.urgent { /* Если рабочий стол требует внимания */
@@ -151,10 +150,8 @@ window#waybar {
     color: #FFFFFF;
 }
 
-/* Ограничение до 5 рабочих столов */
-/* Если у вас всегда 5 или меньше, это не обязательно */
-/* Если может быть больше, но вы хотите видеть только 5: */
-#workspaces button:nth-child(n+6) {
+/* Ограничение по столам убрано */
+/* #workspaces button:nth-child(n+6) {
     display: none;
 }
 
