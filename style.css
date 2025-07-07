@@ -112,43 +112,50 @@ window#waybar {
     border-radius: 15px;
 }
 
-/* Упрощенные стили для модуля рабочих столов Hyprland */
+/* Стили для модуля рабочих столов Hyprland */
 #workspaces {
     padding: 0 5px;
-    margin: 2px 3px; /* Стандартный отступ для группы */
+    margin: 0 3px;
 }
 
 #workspaces button {
-    padding: 2px 5px; /* Стандартные отступы для кнопок модуля */
-    margin: 2px 2px;  /* Небольшие отступы между кнопками */
-    border: 1px solid #777777; /* Простая серая обводка */
-    border-radius: 3px; /* Небольшое скругление, как в примерах */
-    color: #FFFFFF;            /* Белый текст */
-    background-color: transparent; /* Прозрачный фон для неактивных */
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Плавный переход */
-    font-weight: normal; /* Убираем bold для простоты */
-    /* min-width и min-height убраны, размер будет по содержимому + padding */
-    /* background-clip убран, используется значение по умолчанию */
-    /* box-shadow, text-shadow, outline не заданы, будут стандартными или отсутствовать */
+    padding: 1px 7px;  /* Единый паддинг */
+    margin: 3px 3px;
+    border-radius: 15px; /* Скругление 15px */
+    border: 1px solid rgba(0,0,0,0); /* Прозрачная граница по умолчанию */
+    color: #FFFFFF; /* Цвет текста (цифры) для неактивных столов - белый */
+    background-color: rgba(255, 255, 255, 0.15); /* Полупрозрачный светлый фон для неактивных */
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    outline: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    min-width: 25px;
+    min-height: 25px;
+    font-weight: bold;
+    font-size: 15px;
+    background-clip: padding-box;
 }
 
 #workspaces button:hover {
-    background-color: #555555; /* Темно-серый фон при наведении */
-    color: #FFFFFF; /* Убедимся, что текст остается белым */
+    /* Фон и обводка не меняются при наведении */
+    /* Можно добавить/изменить cursor, если нужно: cursor: pointer; */
 }
 
 #workspaces button.active,
-#workspaces button.focused { /* .focused часто используется как синоним .active */
-    background-color: #FFFFFF; /* Белый фон для активного */
-    color: #000000;            /* Черный текст для активного */
-    border: 1px solid #FFFFFF; /* Белая обводка для активного */
-    font-weight: bold; /* Можно вернуть bold для активного, если хочется выделить */
+#workspaces button.focused {
+    background-color: #FFFFFF !important;
+    background-image: none !important;
+    color: #000000 !important;
+    border: 1px solid #FFFFFF !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    outline: none !important;
 }
 
-#workspaces button.urgent { /* Если рабочий стол требует внимания */
-    background-color: #ff0000; /* Красный для срочных */
+#workspaces button.urgent {
+    background-color: #e95420; /* Например, оранжевый */
     color: #FFFFFF;
-    font-weight: bold;
 }
 
 /* Ограничение по столам убрано */
