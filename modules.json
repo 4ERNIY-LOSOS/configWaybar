@@ -40,5 +40,10 @@
         "interval": 5,
         "tooltip": true,
         "tooltip-format": "Nvidia GPU Load: {}%"
+    },
+    "hyprland/language": {
+        "format": " {short}",
+        "tooltip": true,
+        "tooltip-format": "Раскладка: {long}"
     }
 }
