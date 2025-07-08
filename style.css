@@ -30,7 +30,7 @@ window#waybar {
 /* 4. Специфичные стили для отдельных модулей */
 #clock {
     padding: 2px 8px;
-    margin: 2px 5px;
+    margin: 2px 3px; /* ИЗМЕНЕНО */
     transition: background-color 0.2s ease-in-out;
     border-radius: 8px; /* ИЗМЕНЕНО */
 }
@@ -42,7 +42,7 @@ window#waybar {
 
 #pulseaudio {
     padding: 2px 8px;
-    margin: 2px 5px;
+    margin: 2px 3px; /* ИЗМЕНЕНО */
     transition: background-color 0.2s ease-in-out;
     border-radius: 8px; /* ИЗМЕНЕНО */
 }
@@ -54,7 +54,7 @@ window#waybar {
 
 #network {
     padding: 2px 8px;
-    margin: 2px 5px;
+    margin: 2px 3px; /* ИЗМЕНЕНО */
     transition: background-color 0.2s ease-in-out;
     border-radius: 8px; /* ИЗМЕНЕНО */
 }
@@ -66,7 +66,7 @@ window#waybar {
 
 #cpu {
     padding: 2px 8px;
-    margin: 2px 5px;
+    margin: 2px 3px; /* ИЗМЕНЕНО */
     transition: background-color 0.2s ease-in-out;
     border-radius: 8px; /* ИЗМЕНЕНО */
 }
@@ -78,7 +78,7 @@ window#waybar {
 
 #memory {
     padding: 2px 8px;
-    margin: 2px 5px;
+    margin: 2px 3px; /* ИЗМЕНЕНО */
     transition: background-color 0.2s ease-in-out;
     border-radius: 8px; /* ИЗМЕНЕНО */
 }
@@ -90,7 +90,7 @@ window#waybar {
 
 #custom-gpu {
     padding: 2px 8px;
-    margin: 2px 5px;
+    margin: 2px 3px; /* ИЗМЕНЕНО */
     transition: background-color 0.2s ease-in-out;
     border-radius: 8px; /* ИЗМЕНЕНО */
 }
@@ -102,7 +102,7 @@ window#waybar {
 
 #language {
     padding: 2px 8px;
-    margin: 2px 5px;
+    margin: 2px 3px; /* ИЗМЕНЕНО */
     transition: background-color 0.2s ease-in-out;
     border-radius: 8px; /* ИЗМЕНЕНО */
 }
@@ -115,7 +115,7 @@ window#waybar {
 /* Стили для модуля рабочих столов Hyprland от пользователя */
 #image-archlogo { /* Стиль для логотипа Arch */
     padding: 4px 6px; /* Внутренние отступы для фона вокруг иконки */
-    margin: 0 4px 0 6px; /* Убрано auto, оставлены горизонтальные отступы. Вертикальные отступы 0. */
+    margin: 0 3px 0 6px; /* ИЗМЕНЕНО: правый отступ 3px, левый сохранен 6px */
     border-radius: 8px; /* ИЗМЕНЕНО */
     transition: background-color 0.2s ease-in-out;
 }
@@ -162,7 +162,7 @@ window#waybar {
 
 #tray {
     padding: 2px 5px;
-    margin: 2px 0px 2px 5px;
+    margin: 2px 0px 2px 3px; /* ИЗМЕНЕНО: левый отступ 3px */
 }
 
 #tray > .passive {
