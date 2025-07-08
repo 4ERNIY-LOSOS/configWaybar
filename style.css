@@ -113,6 +113,17 @@ window#waybar {
 }
 
 /* Стили для модуля рабочих столов Hyprland от пользователя */
+#image-archlogo { /* Стиль для логотипа Arch */
+    padding: 2px 8px; /* Аналогично другим иконкам/модулям для выравнивания */
+    margin: 2px 5px;
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    border-radius: 15px; /* Если хотите такое же закругление как у других */
+}
+
+#image-archlogo:hover {
+    background-color: rgba(160, 160, 160, 0.6); /* Эффект при наведении, как у других */
+}
+
 #workspaces {
     padding: 0 5px;
     margin: 0 3px;

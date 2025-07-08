@@ -5,7 +5,7 @@
     "height": 39, // Увеличили высоту до 39px, как рекомендовал Waybar
     // "width": 60,
     "spacing": 4,
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["image#archlogo", "hyprland/workspaces"],
     "modules-center": ["cpu", "memory", "custom/gpu"], // Возвращаем custom/gpu
     "modules-right": ["hyprland/language", "network", "pulseaudio", "clock", "tray"],
 
