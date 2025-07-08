@@ -19,7 +19,7 @@
     },
     "network": {
         "format-wifi": " {signalStrength}%",
-        "format-ethernet": "",
+        "format-ethernet": "",
         "format-disconnected": "",
         "interval": 5,
         "tooltip": false
@@ -35,11 +35,11 @@
     },
     "custom/gpu": {
         "exec": "~/.config/waybar/scripts/get_gpu_util.sh",
-        "format": "GPU {}%",
+        "format": " GPU {}%",
         "return-type": "text",
         "interval": 5,
         "tooltip": true,
-        "tooltip-format": "Nvidia GPU Load: {}%"
+        "tooltip-format": " Nvidia GPU Load: {}%"
     },
     "hyprland/language": {
         "format": " {short}",
