@@ -25,8 +25,6 @@ window#waybar {
     border-radius: 15px;
     margin: 3px 5px;
     padding: 0 8px;
-    display: flex;
-    align-items: center;
 }
 
 /* 4. Специфичные стили для отдельных модулей */
@@ -117,7 +115,7 @@ window#waybar {
 /* Стили для модуля рабочих столов Hyprland от пользователя */
 #image-archlogo { /* Стиль для логотипа Arch */
     padding: 4px 6px; /* Внутренние отступы для фона вокруг иконки */
-    margin: auto 4px auto 6px; /* auto для верт. центрирования, отступы по бокам */
+    margin: 0 4px 0 6px; /* Убрано auto, оставлены горизонтальные отступы. Вертикальные отступы 0. */
     border-radius: 10px; /* Меньший радиус для иконки */
     transition: background-color 0.2s ease-in-out;
 }
