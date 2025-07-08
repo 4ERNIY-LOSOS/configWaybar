@@ -21,8 +21,8 @@ window#waybar {
 .modules-center,
 .modules-right {
     background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* ИЗМЕНЕНО непрозрачность */
+    border-radius: 12px; /* ИЗМЕНЕНО */
     margin: 3px 5px;
     padding: 0 8px;
 }
@@ -32,91 +32,91 @@ window#waybar {
     padding: 2px 8px;
     margin: 2px 5px;
     transition: background-color 0.2s ease-in-out;
-    border-radius: 15px;
+    border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 #clock:hover {
     background-color: rgba(120, 120, 120, 0.6);
-    border-radius: 15px;
+    border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 #pulseaudio {
     padding: 2px 8px;
     margin: 2px 5px;
     transition: background-color 0.2s ease-in-out;
-    border-radius: 15px;
+    border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 #pulseaudio:hover {
     background-color: rgba(120, 120, 120, 0.6);
-    border-radius: 15px;
+    border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 #network {
     padding: 2px 8px;
     margin: 2px 5px;
     transition: background-color 0.2s ease-in-out;
-    border-radius: 15px;
+    border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 #network:hover {
     background-color: rgba(120, 120, 120, 0.6);
-    border-radius: 15px;
+    border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 #cpu {
     padding: 2px 8px;
     margin: 2px 5px;
     transition: background-color 0.2s ease-in-out;
-    border-radius: 15px;
+    border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 #cpu:hover {
     background-color: rgba(120, 120, 120, 0.6);
-    border-radius: 15px;
+    border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 #memory {
     padding: 2px 8px;
     margin: 2px 5px;
     transition: background-color 0.2s ease-in-out;
-    border-radius: 15px;
+    border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 #memory:hover {
     background-color: rgba(120, 120, 120, 0.6);
-    border-radius: 15px;
+    border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 #custom-gpu {
     padding: 2px 8px;
     margin: 2px 5px;
     transition: background-color 0.2s ease-in-out;
-    border-radius: 15px;
+    border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 #custom-gpu:hover {
     background-color: rgba(120, 120, 120, 0.6);
-    border-radius: 15px;
+    border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 #language {
     padding: 2px 8px;
     margin: 2px 5px;
     transition: background-color 0.2s ease-in-out;
-    border-radius: 15px;
+    border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 #language:hover {
     background-color: rgba(120, 120, 120, 0.6);
-    border-radius: 15px;
+    border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 /* Стили для модуля рабочих столов Hyprland от пользователя */
 #image-archlogo { /* Стиль для логотипа Arch */
     padding: 4px 6px; /* Внутренние отступы для фона вокруг иконки */
     margin: 0 4px 0 6px; /* Убрано auto, оставлены горизонтальные отступы. Вертикальные отступы 0. */
-    border-radius: 10px; /* Меньший радиус для иконки */
+    border-radius: 8px; /* ИЗМЕНЕНО */
     transition: background-color 0.2s ease-in-out;
 }
 
@@ -136,7 +136,7 @@ window#waybar {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   color: rgba(255, 255, 255, 1); /* Белый */
   border:none;
-  border-radius: 15px;
+  border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
 #workspaces button.active {
