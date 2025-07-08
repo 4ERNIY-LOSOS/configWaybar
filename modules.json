@@ -68,7 +68,7 @@
         "path": "/home/matvey/.config/waybar/image/archlinux-icon.svg",
         "width": 18,
         "height": 18,
-        "tooltip": false,
-        "on-click": "xdg-open https://archlinux.org" // Пример действия по клику
+        "tooltip": "Запуск приложений",
+        "on-click": "wofi --show drun"
     }
 }
