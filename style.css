@@ -36,7 +36,7 @@ window#waybar {
 }
 
 #clock:hover {
-    background-color: rgba(120, 120, 120, 0.6);
+    background-color: rgba(80, 80, 80, 0.7); /* ИЗМЕНЕНО */
     border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
@@ -48,7 +48,7 @@ window#waybar {
 }
 
 #pulseaudio:hover {
-    background-color: rgba(120, 120, 120, 0.6);
+    background-color: rgba(80, 80, 80, 0.7); /* ИЗМЕНЕНО */
     border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
@@ -60,7 +60,7 @@ window#waybar {
 }
 
 #network:hover {
-    background-color: rgba(120, 120, 120, 0.6);
+    background-color: rgba(80, 80, 80, 0.7); /* ИЗМЕНЕНО */
     border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
@@ -72,7 +72,7 @@ window#waybar {
 }
 
 #cpu:hover {
-    background-color: rgba(120, 120, 120, 0.6);
+    background-color: rgba(80, 80, 80, 0.7); /* ИЗМЕНЕНО */
     border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
@@ -84,7 +84,7 @@ window#waybar {
 }
 
 #memory:hover {
-    background-color: rgba(120, 120, 120, 0.6);
+    background-color: rgba(80, 80, 80, 0.7); /* ИЗМЕНЕНО */
     border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
@@ -96,7 +96,7 @@ window#waybar {
 }
 
 #custom-gpu:hover {
-    background-color: rgba(120, 120, 120, 0.6);
+    background-color: rgba(80, 80, 80, 0.7); /* ИЗМЕНЕНО */
     border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
@@ -108,7 +108,7 @@ window#waybar {
 }
 
 #language:hover {
-    background-color: rgba(120, 120, 120, 0.6);
+    background-color: rgba(80, 80, 80, 0.7); /* ИЗМЕНЕНО */
     border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
