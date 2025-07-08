@@ -3,41 +3,41 @@
     font-family: "Noto Sans Mono", "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 6 Solid", sans-serif;
     font-size: 16px;
     border: none;
-    border-radius: 0;
+    /* border-radius: 0; */ /* Оставим закомментированным */
     min-height: 0;
 }
 
 /* 2. Стили панели Waybar */
 window#waybar {
-    background-color: transparent; /* Полностью прозрачный фон */
-    color: #FFFFFF;                /* Цвет текста: белый */
-    border-radius: 0px;             /* Без скругления углов */
-    border: none;                   /* Без обводки */
-    margin: 10px 10px 0 10px;      /* Отступы от краев экрана */
+    background-color: transparent;
+    color: rgba(255, 255, 255, 1); /* Белый */
+    border-radius: 0px;
+    border: none;
+    margin: 10px 10px 0 10px;
 }
 
 /* 3. Стили для групп модулей */
 .modules-left,
 .modules-center,
 .modules-right {
-    background-color: rgba(0, 0, 0, 0.5);      /* Полупрозрачный черный фон */
-    border: 1px solid rgba(255, 255, 255, 0.15); /* Тонкая полупрозрачная белая обводка */
-    border-radius: 15px;                         /* Скругление углов */
-    margin: 3px 5px;                            /* Отступы вокруг групп от краев панели */
-    padding: 0 8px;                             /* Внутренние горизонтальные отступы для модулей */
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    margin: 3px 5px;
+    padding: 0 8px;
 }
 
 /* 4. Специфичные стили для отдельных модулей */
 #clock {
-    padding: 2px 8px; /* Внутренние отступы модуля */
-    margin: 2px 5px;  /* Внешние отступы модуля, обеспечивают расстояние от краев группы */
+    padding: 2px 8px;
+    margin: 2px 5px;
     transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
     border-radius: 15px;
 }
 
 #clock:hover {
-    background-color: rgba(160, 160, 160, 0.6); /* Фон при наведении */
-    border-radius: 15px; /* Сохраняем радиус, чтобы форма не менялась */
+    background-color: rgba(160, 160, 160, 0.6);
+    border-radius: 15px;
 }
 
 #pulseaudio {
@@ -48,7 +48,7 @@ window#waybar {
 }
 
 #pulseaudio:hover {
-    background-color: rgba(160, 160, 160, 0.6); /* Такой же фон при наведении, как у clock */
+    background-color: rgba(160, 160, 160, 0.6);
     border-radius: 15px;
 }
 
@@ -60,7 +60,7 @@ window#waybar {
 }
 
 #network:hover {
-    background-color: rgba(160, 160, 160, 0.6); /* Такой же фон при наведении */
+    background-color: rgba(160, 160, 160, 0.6);
     border-radius: 15px;
 }
 
@@ -87,6 +87,81 @@ window#waybar {
     background-color: rgba(160, 160, 160, 0.6);
     border-radius: 15px;
 }
+
+#custom-gpu {
+    padding: 2px 8px;
+    margin: 2px 5px;
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    border-radius: 15px;
+}
+
+#custom-gpu:hover {
+    background-color: rgba(160, 160, 160, 0.6);
+    border-radius: 15px;
+}
+
+#language {
+    padding: 2px 8px;
+    margin: 2px 5px;
+    transition: background-color 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    border-radius: 15px;
+}
+
+#language:hover {
+    background-color: rgba(160, 160, 160, 0.6);
+    border-radius: 15px;
+}
+
+/* Стили для модуля рабочих столов Hyprland от пользователя */
+#workspaces {
+    padding: 0 5px;
+    margin: 0 3px;
+}
+
+#workspaces button {
+  padding: 2px 6px;
+  margin: 2px 3px;
+  background: transparent;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 1); /* Белый */
+  border:none;
+  border-radius: 15px;
+}
+
+#workspaces button.active {
+  background: rgba(250, 250, 250, 1); /* Почти белый #fafafa */
+  color: rgba(0, 0, 0, 1);           /* Черный */
+}
+
+#workspaces button:hover {
+  background: rgba(160, 160, 160, 0.6); /* Серый полупрозрачный */
+  color: rgba(255, 255, 255, 1);       /* Белый */
+  box-shadow: none;
+}
+
+#workspaces button.urgent {
+    background-color: rgba(233, 84, 32, 1); /* Оранжевый #e95420 */
+    color: rgba(255, 255, 255, 1);          /* Белый */
+}
+
+/* Ограничение по столам убрано, если было */
+/* #workspaces button:nth-child(n+6) {
+    display: none;
+} */
+
+#tray {
+    padding: 2px 5px;
+    margin: 2px 0px 2px 5px;
+}
+
+#tray > .passive {
+    opacity: 0.5;
+}
+#tray > .needs-attention {
+    background-color: rgba(235, 77, 75, 1); /* Красный #eb4d4b */
+    opacity: 1.0;
+}
+
 
 /* Подключение файла с анимациями */
 @import url("animations.css");
