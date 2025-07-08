@@ -132,28 +132,34 @@ window#waybar {
 #workspaces button {
   padding: 2px 6px;
   margin: 2px 3px;
-  background: transparent;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  background: transparent !important; /* !important добавлен для надежности */
+  /* transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out; */ /* ЗАКОММЕНТИРОВАНО - управляется из animations.css */
   color: rgba(255, 255, 255, 1); /* Белый */
   border:none;
   border-radius: 8px; /* ИЗМЕНЕНО */
 }
 
+/*
 #workspaces button.active {
-  background: rgba(250, 250, 250, 1); /* Почти белый #fafafa */
-  color: rgba(0, 0, 0, 1);           /* Черный */
+  background: rgba(250, 250, 250, 1);
+  color: rgba(0, 0, 0, 1);
 }
+*/
 
+/*
 #workspaces button:hover {
-  background: rgba(160, 160, 160, 0.6); /* Серый полупрозрачный */
-  color: rgba(255, 255, 255, 1);       /* Белый */
+  background: rgba(160, 160, 160, 0.6);
+  color: rgba(255, 255, 255, 1);
   box-shadow: none;
 }
+*/
 
+/*
 #workspaces button.urgent {
-    background-color: rgba(233, 84, 32, 1); /* Оранжевый #e95420 */
-    color: rgba(255, 255, 255, 1);          /* Белый */
+    background-color: rgba(233, 84, 32, 1);
+    color: rgba(255, 255, 255, 1);
 }
+*/
 
 /* Ограничение по столам убрано, если было */
 /* #workspaces button:nth-child(n+6) {

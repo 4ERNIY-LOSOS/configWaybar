@@ -1,2 +1,86 @@
-/* Файл для ваших CSS анимаций */
-/* @keyframes ... */
+/* animations.css */
+
+/*
+  Экспериментальная "жидкая" анимация для переключения рабочих столов.
+  Может не работать или работать некорректно в Waybar из-за ограничений CSS-движка GTK.
+*/
+
+#workspaces {
+    /* Применяем SVG-фильтр "goo" для эффекта слипания */
+    /*
+      SVG фильтр:
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none">
+        <defs>
+          <filter id="gooify">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="
+              1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 0 18 -7" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+      Параметры stdDeviation (сейчас 6) и значения в feColorMatrix (18, -7) можно подбирать.
+    */
+    filter: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" version="1.1"%3E%3Cdefs%3E%3Cfilter id="gooify"%3E%3CfeGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" /%3E%3CfeColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -7" result="goo" /%3E%3CfeBlend in="SourceGraphic" in2="goo" /%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E#gooify');
+
+    /* Важно, чтобы контейнер позволял видеть "размытие" от фильтра, если оно выходит за границы кнопок */
+    /* overflow: visible; /* для #workspaces, если он обрезает. Уже есть на кнопках. */
+}
+
+#workspaces button {
+  position: relative; /* Для позиционирования псевдоэлемента */
+  background: transparent !important; /* Кнопка должна быть прозрачной для эффекта */
+  color: rgba(255, 255, 255, 1); /* Стандартный цвет текста неактивной кнопки */
+  transition: color 0.2s ease-in-out 0.1s; /* Небольшая задержка для смены цвета текста */
+  overflow: visible; /* Чтобы фильтр мог работать с краями */
+  /* Базовые стили padding, margin, border, border-radius остаются в style.css */
+}
+
+#workspaces button::before { /* Анимируемая "капля" фона */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(250, 250, 250, 1); /* Цвет фона активной кнопки */
+  border-radius: 8px; /* Соответствует border-radius кнопки из style.css */
+
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: center center; /* Анимация масштаба из центра */
+
+  transition: transform 0.35s cubic-bezier(0.5, -0.3, 0.1, 1.3), opacity 0.2s ease-out;
+
+  z-index: -1; /* Фон под текстом */
+}
+
+#workspaces button.active {
+  color: rgba(0, 0, 0, 1); /* Цвет текста активной кнопки */
+}
+
+#workspaces button.active::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Стиль для urgent состояния */
+#workspaces button.urgent {
+    color: rgba(255, 255, 255, 1);
+}
+
+#workspaces button.urgent::before {
+    background-color: rgba(233, 84, 32, 1); /* Оранжевый фон для urgent */
+    transform: scale(1);
+    opacity: 1;
+    /* Если для urgent нужна другая анимация появления, transition нужно переопределить здесь */
+}
+
+#workspaces button:not(.active):hover {
+  /* Пока ховер для неактивных кнопок не определен, чтобы не мешать */
+  /* Если нужен, можно добавить изменение цвета текста или очень легкий эффект */
+}
