@@ -35,7 +35,7 @@
     },
     "custom/gpu": {
         "exec": "~/.config/waybar/scripts/get_gpu_util.sh",
-        "format": " GPU {}%",
+        "format": " {}%",
         "return-type": "text",
         "interval": 5,
         "tooltip": true,
@@ -43,18 +43,10 @@
     },
     "hyprland/language": {
         "format": " {short}",
-        "tooltip": true,
-        "tooltip-format": "Раскладка: {long}"
+        "tooltip": true
     },
     "hyprland/workspaces": {
-        "format": "{id}", // Используем {id} для числовых идентификаторов
-        // "persistent_workspaces": { // Раскомментируйте и настройте, если хотите всегда видеть 5 столов
-        //     "1": [],
-        //     "2": [],
-        //     "3": [],
-        //     "4": [],
-        //     "5": []
-        // },
+        "format": "{id}",
         "all-outputs": false,
         "on-click": "activate",
         "sort-by-number": true
@@ -64,10 +56,8 @@
         "spacing": 8
     },
     "image#archlogo": {
-        "format": "{}", // Оставляем пустым, если не нужен дополнительный текст
+        "format": "{}",
         "path": "/home/matvey/.config/waybar/image/archlinux-icon.svg",
-        "width": 18,
-        "height": 18,
         "tooltip": false,
         "on-click": "wofi --show drun"
     }
